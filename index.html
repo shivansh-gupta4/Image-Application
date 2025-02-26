@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insyte AI Labs Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Insyte AI Labs Gallery</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search by image ID...">
+        </div>
+    </header>
+
+    <main>
+        <div id="image-grid" class="image-grid"></div>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <canvas id="image-canvas"></canvas>
+            <div class="color-buttons">
+                <button class="color-btn" data-color="#ff0000">Red</button>
+                <button class="color-btn" data-color="#0000ff">Blue</button>
+                <button class="color-btn" data-color="#00ff00">Green</button>
+                <button class="color-btn" data-color="#ffff00">Yellow</button>
+                <button class="color-btn" data-color="#808080">Gray</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
