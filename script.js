@@ -73,7 +73,7 @@ function closeModal() {
 }
 
 function filterImages(query) {
-  const filteredImages = imageData.filter((image) => image.id.toString().includes(query))
+  const filteredImages = imageData.filter((image) => image.id.toString() === query);
   createImageGrid(filteredImages)
 }
 
