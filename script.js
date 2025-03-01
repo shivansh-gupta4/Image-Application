@@ -73,8 +73,14 @@ function closeModal() {
 }
 
 function filterImages(query) {
-  const filteredImages = imageData.filter((image) => image.id.toString() === query);
-  createImageGrid(filteredImages)
+  let filteredImages;
+
+  if (query === "") 
+    filteredImages = imageData;
+  else 
+    filteredImages = imageData.filter((image) => image.id.toString() === query);
+
+  createImageGrid(filteredImages);
 }
 
 // Event listeners
@@ -86,7 +92,7 @@ window.addEventListener("click", (e) => {
 })
 
 searchInput.addEventListener("input", (e) => {
-  filterImages(e.target.value)
+  filterImages(e.target.value.trim())
 })
 
 colorButtons.forEach((button) => {
